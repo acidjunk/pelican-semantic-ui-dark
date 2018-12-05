@@ -1,0 +1,21 @@
+body {
+    background-color: #000000;
+}
+
+.intro {
+    background: #b46800;
+    margin-bottom: 60px !important;
+    border-bottom: 1px solid #eee;
+    padding: 100px !important;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.overlay {
+    float: left;
+    margin: 0em 1em 1em 0em;
+}
+.overlay .menu {
+    position: relative;
+    left: 0;
+    transition: left 0.5s ease;
+}

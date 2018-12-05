@@ -1,0 +1,17 @@
+<div class="ui inverted segment">
+  <div class="ui inverted secondary menu">
+        <a href="/" class="header item">
+            {% if LOGOPATH %}
+            <img class="logo" src="{{ SITEURL }}{{ LOGOPATH }}">
+            {% else %}
+            <img class="logo" src="{{ SITEURL }}/theme/images/logo.png">
+            {% endif %}
+            &nbsp;{{ SITENAME }}
+        </a>
+        {% for item, url in MENU_LINKS %}
+        <a href="{{ url }}" class="item">{{ item }}</a>
+        {% endfor %}
+
+
+  </div>
+</div>
