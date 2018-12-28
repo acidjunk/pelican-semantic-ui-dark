@@ -23,4 +23,6 @@ body {
     font-size: 1.23rem;
     min-height:300px;
 }
-
+.statistic {
+    color: rgba(255, 255, 255, 0.8)
+}

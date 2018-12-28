@@ -1,17 +1,32 @@
 <div class="ui inverted segment">
   <div class="ui inverted secondary menu">
-        <a href="/" class="header item">
+        <a href="/" class="header item{% if not page %} active {% endif %}">
             {% if LOGOPATH %}
+
             <img class="logo" src="{{ SITEURL }}{{ LOGOPATH }}">
             {% else %}
             <img class="logo" src="{{ SITEURL }}/theme/images/logo.png">
             {% endif %}
-            &nbsp;{{ SITENAME }}
+            &nbsp;{{ SITENAME }} {{ url}}
         </a>
         {% for item, url in MENU_LINKS %}
-        <a href="{{ url }}" class="item">{{ item }}</a>
+            <div class="item"><a href="{{ url }}" class="item">{{ item }}</a></div>
         {% endfor %}
 
-
-  </div>
+        {% if DISPLAY_PAGES_ON_MENU %}
+          {% for p in pages %}
+            <div class="item{% if p == page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></div>
+          {% endfor %}
+        {% endif %}
+        {% for title, link in MENUITEMS %}
+            <div><a href="{{ link }}">{{ title }}</a></div>
+        {% endfor %}
+        {% if DISPLAY_CATEGORIES_ON_MENU %}
+            {% for cat, null in categories %}
+                {% if cat != "misc" %}
+                <div class="item{% if cat == category %} active{% endif %}"><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+</div>
 </div>
