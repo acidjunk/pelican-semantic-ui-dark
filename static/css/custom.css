@@ -26,3 +26,15 @@ body {
 .statistic {
     color: rgba(255, 255, 255, 0.8)
 }
+
+.section > h2 {
+    margin-top: 14px;
+}
+
+.section > h3 {
+    margin-top: 11px;
+}
+
+.section > h4 {
+    margin-top: 10px;
+}
