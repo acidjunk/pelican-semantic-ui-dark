@@ -1,8 +1,7 @@
 <div class="ui inverted segment">
   <div class="ui inverted secondary menu">
-        <a href="/" class="header item{% if not page %} active {% endif %}">
+        <a href="{{ SITEURL }}/" class="header item{% if not page %} active {% endif %}">
             {% if LOGOPATH %}
-
             <img class="logo" src="{{ SITEURL }}{{ LOGOPATH }}">
             {% else %}
             <img class="logo" src="{{ SITEURL }}/theme/images/logo.png">
